@@ -72,6 +72,10 @@
         </select>
       </div>
       <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+      <div class="text-warning" >
+        <c:if test="${check_}"> <p>Sai Tài Khoản</p>
+        </c:if>
+      </div>
     </form>
   </div>
   <!-- <div class="change-register">

@@ -37,7 +37,7 @@ public class UserServlet extends HttpServlet {
         }
         switch (action){
             default:
-                comeBackIndex(req,resp);
+                comeBackIndex(req,resp, false);
                 break;
 
         }
@@ -64,7 +64,7 @@ public class UserServlet extends HttpServlet {
                 teacherLogin(req,resp);
                 break;
             default:
-                comeBackIndex(req,resp);
+                comeBackIndex(req,resp,true);
                 break;
 
         }
@@ -90,7 +90,7 @@ public class UserServlet extends HttpServlet {
                 }
             }
             if (!check){
-                comeBackIndex(req,resp);
+                comeBackIndex(req,resp,true);
             }
         } catch (Exception throwables) {
             throwables.printStackTrace();
@@ -119,7 +119,7 @@ public class UserServlet extends HttpServlet {
                 }
             }
             if (!check){
-                comeBackIndex(req,resp);
+                comeBackIndex(req,resp,true);
             }
         } catch (Exception throwables) {
             throwables.printStackTrace();
@@ -148,7 +148,7 @@ public class UserServlet extends HttpServlet {
                 }
             }
             if (!check){
-                comeBackIndex(req,resp);
+                comeBackIndex(req,resp,true);
             }
         } catch (Exception throwables) {
             throwables.printStackTrace();
@@ -156,10 +156,14 @@ public class UserServlet extends HttpServlet {
 
     }
 
-    private void comeBackIndex(HttpServletRequest req, HttpServletResponse resp){
+    private void comeBackIndex(HttpServletRequest req, HttpServletResponse resp, boolean check){
+         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         try {
-            resp.sendRedirect("/index.jsp");
+            req.setAttribute("check_", check);
+           dispatcher.forward(req, resp);
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ServletException e) {
             e.printStackTrace();
         }
     }
