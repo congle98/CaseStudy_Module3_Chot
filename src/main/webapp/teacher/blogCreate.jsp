@@ -65,7 +65,7 @@
                     <div class="bnt-submit">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                </div>>
+                </div>
             </form>
         </div>
     </div>

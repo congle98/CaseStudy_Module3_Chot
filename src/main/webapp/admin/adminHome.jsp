@@ -38,7 +38,7 @@
 <div class="content-block">
     <div class="content">
         <div class="content-title">
-            Tên content
+            Danh sách User
         </div>
         <div class="main-content">
             <div class="table-title">
