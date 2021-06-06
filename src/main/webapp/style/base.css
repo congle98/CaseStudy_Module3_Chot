@@ -8,6 +8,7 @@ html, body{
     height: 100%;
     color: var(--while-color);
     font-size: 1.4rem;
+    background-color:  #f8fafb;
 }
 :root{
     --while-color:#ffffff;
