@@ -45,6 +45,8 @@
           </select>
         </div>
         <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+        <c:if test="${check_}"> <p class="text-danger" style="text-align:center" >ID and Password error !!!</p>
+        </c:if>
       </form>
     </div>
   </div>
