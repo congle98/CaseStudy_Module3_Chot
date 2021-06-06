@@ -191,6 +191,7 @@ public class AdminServlet extends HttpServlet {
     private void showFormSupervisorEdit(HttpServletRequest req, HttpServletResponse resp) {
         req.setAttribute("addressList",addressListMain);
         req.setAttribute("statusList",statusListMain);
+        req.setAttribute("admin",adminMain);
         int id = Integer.parseInt(req.getParameter("id"));
         Supervisor supervisor = supervisorService.findById(id);
 
@@ -208,6 +209,7 @@ public class AdminServlet extends HttpServlet {
     private void showFormSupervisorCreate(HttpServletRequest req, HttpServletResponse resp) {
         req.setAttribute("addressList",addressListMain);
         req.setAttribute("statusList",statusListMain);
+        req.setAttribute("admin",adminMain);
         RequestDispatcher rd = req.getRequestDispatcher("/admin/supervisorCreate.jsp");
         try {
             rd.forward(req,resp);
@@ -264,6 +266,7 @@ public class AdminServlet extends HttpServlet {
     private void showFormTeacherEdit(HttpServletRequest req, HttpServletResponse resp) {
         req.setAttribute("addressList",addressListMain);
         req.setAttribute("statusList",statusListMain);
+        req.setAttribute("admin",adminMain);
         int id = Integer.parseInt(req.getParameter("id"));
         Teacher teacher = teacherService.findById(id);
 
@@ -281,6 +284,7 @@ public class AdminServlet extends HttpServlet {
     private void showFormTeacherCreate(HttpServletRequest req, HttpServletResponse resp) {
         req.setAttribute("addressList",addressListMain);
         req.setAttribute("statusList",statusListMain);
+        req.setAttribute("admin",adminMain);
         RequestDispatcher rd = req.getRequestDispatcher("/admin/teacherCreate.jsp");
         try {
             rd.forward(req,resp);
@@ -321,6 +325,7 @@ public class AdminServlet extends HttpServlet {
         req.setAttribute("addressList",addressListMain);
         req.setAttribute("statusList",statusListMain);
         req.setAttribute("classList",classListMain);
+        req.setAttribute("admin",adminMain);
         int id = Integer.parseInt(req.getParameter("id"));
         Student student = studentService.findById(id);
         System.out.println(student);
@@ -340,6 +345,7 @@ public class AdminServlet extends HttpServlet {
         req.setAttribute("addressList",addressListMain);
         req.setAttribute("statusList",statusListMain);
         req.setAttribute("classList",classListMain);
+        req.setAttribute("admin",adminMain);
         RequestDispatcher rd = req.getRequestDispatcher("/admin/studentCreate.jsp");
         try {
             rd.forward(req,resp);
@@ -396,6 +402,7 @@ public class AdminServlet extends HttpServlet {
     }
     private void showFormCourseCreate(HttpServletRequest req, HttpServletResponse resp) {
         RequestDispatcher rd = req.getRequestDispatcher("/admin/courseCreate.jsp");
+        req.setAttribute("admin",adminMain);
         try {
             rd.forward(req,resp);
         } catch (ServletException e) {

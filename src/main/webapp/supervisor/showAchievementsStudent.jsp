@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: CONG
   Date: 6/4/2021
-  Time: 9:20 AM
+  Time: 10:16 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -18,23 +18,21 @@
     <link rel="stylesheet" href="/style/navigationBase.css">
     <link rel="stylesheet" href="/style/contentBase.css">
     <link rel="stylesheet" href="/style/formBase.css">
-
 </head>
 <body>
-
 <div class="navigation">
     <div class="container navi-items">
         <div class="logo-block">
             <div class="logo">
-                <a href="/Teacher?action=home"><i class="fas fa-graduation-cap"></i>Home</a>
+                <a href="/Supervisor?action=home"><i class="fas fa-graduation-cap"></i>Home</a>
             </div>
         </div>
         <div class="navi-list">
-            <div class="navi-item"><a href="/Teacher?action=classManager">Classroom Management</a></div>
-            <div class="navi-item user-controller">${teacher.name}<i class="fas fa-user-tie"></i>
+            <div class="navi-item"><a href="/Supervisor?action=showStudents">Student Management</a></div>
+            <div class="navi-item user-controller">${supervisor.name}<i class="fas fa-user-tie"></i>
                 <div class="controller">
-                    <div class="control-item"><a href="/Teacher?action=accountManager">Account Management</a></div>
-                    <div class="control-item"><a href="/Teacher?action=logOut">LogOut</a></div>
+                    <div class="control-item"><a href="/Supervisor?action=accountManager">Account Management</a></div>
+                    <div class="control-item"><a href="/Supervisor?action=logOut">LogOut</a></div>
                 </div>
             </div>
         </div>
@@ -43,24 +41,33 @@
 <div class="content-block">
     <div class="content">
         <div class="content-title">
-            Bảng danh sách blog theo lớp
+            Bảng điểm theo từng module
         </div>
         <div class="main-content">
             <div class="student-list">
                 <table class="table table-hover">
                     <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Id blog</th>
-                        <th scope="col">Chi tiết</th>
-                        <th scope="col">Ngày đăng</th>
+                        <th scope="col">Id module</th>
+                        <th scope="col">Tên module</th>
+                        <th scope="col">Ngày bắt đầu</th>
+                        <th scope="col">Ngày kết thúc</th>
+                        <th scope="col">Số điểm</th>
+                        <th scope="col">Thao tác</th>
+
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${blogList}" var="blog">
+                    <c:forEach items="${moduleList}" var="module" varStatus="loop">
                         <tr>
-                            <td scope="row">${blog.id}</td>
-                            <td>${blog.description}</td>
-                            <td>${blog.date}</td>
+                            <td scope="row">${module.id}</td>
+                            <td>${module.name}</td>
+                            <td>${module.dateStart}</td>
+                            <td>${module.dateEnd}</td>
+                            <td><c:if test = "${scoreList.get(loop.index) > 0}">
+                                ${scoreList.get(loop.index)}
+                            </c:if></td>
+                            <td><a class="btn btn-outline-danger" href="/Supervisor?action=editScore&idStudent=${studentId}&idModule=${module.id}">edit score</a></td>
                         </tr>
                     </c:forEach>
                     </tbody>
@@ -69,11 +76,8 @@
         </div>
     </div>
 </div>
-
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </html>
-
-
+>
