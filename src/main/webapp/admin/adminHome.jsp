@@ -66,7 +66,7 @@
                             <td>${s.email}</td>
                             <td>${s.password}</td>
                             <td>${s.address.name}</td>
-                            <td>${s.url}</td>
+                            <td><img class="user-img" src="${s.url}" alt=""></td>
                             <td>${s.dob}</td>
                             <td>${s.status.name}</td>
 
@@ -107,7 +107,7 @@
                         <td>${t.email}</td>
                         <td>${t.password}</td>
                         <td>${t.address.name}</td>
-                        <td>${t.url}</td>
+                        <td><img class="user-img" src="${t.url}" alt=""></td>
                         <td>${t.dob}</td>
                         <td>${t.status.name}</td>
 
@@ -151,7 +151,7 @@
                             <td>${s.email}</td>
                             <td>${s.password}</td>
                             <td>${s.address.name}</td>
-                            <td>${s.url}</td>
+                            <td><img class="user-img" src="${s.url}" alt=""></td>
                             <td>${s.dob}</td>
                             <td>${s.status.name}</td>
                             <td>${s.classOfAcademy.name}</td>
