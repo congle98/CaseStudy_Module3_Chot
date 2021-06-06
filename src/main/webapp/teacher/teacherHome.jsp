@@ -81,7 +81,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Khoá học java</h5>
                     <p class="card-text">Java là một nền tảng phát triển các ứng dụng phần mềm có vị trí rất lớn trong những năm cuối thế kỉ 20, đầu thế kỉ 21...</p>
-                    <a href="#" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
+                    <a href="https://vi.wikipedia.org/wiki/Java_(ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh)" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
                 </div>
             </div>
             <div class="card" >
@@ -89,7 +89,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Khoá học php</h5>
                     <p class="card-text">PHP: Hypertext Preprocessor, thường được viết tắt thành PHP là một ngôn ngữ lập trình kịch bản được dùng viết các ứng dụng cho máy chủ..</p>
-                    <a href="#" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
+                    <a href="https://vi.wikipedia.org/wiki/PHP" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
                 </div>
             </div>
             <div class="card" >
@@ -97,7 +97,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Khoá học python</h5>
                     <p class="card-text">Python là một ngôn ngữ lập trình bậc cao cho các mục đích lập trình đa năng do Guido van Rossum tạo ra và lần đầu ra mắt vào năm 1991..</p>
-                    <a href="#" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
+                    <a href="https://vi.wikipedia.org/wiki/Python_(ng%C3%B4n_ng%E1%BB%AF_l%E1%BA%ADp_tr%C3%ACnh)" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
                 </div>
             </div>
             <div class="card" >
@@ -105,13 +105,12 @@
                 <div class="card-body">
                     <h5 class="card-title">Khoá học .net</h5>
                     <p class="card-text">NET Framework là một nền tảng lập trình và cũng là một nền tảng thực thi ứng dụng chủ yếu trên hệ điều hành Microsoft Windows..</p>
-                    <a href="#" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
+                    <a href="https://vi.wikipedia.org/wiki/ASP.NET" class="btn btn-primary card-btn">Tìm hiểu thêm</a>
                 </div>
             </div>
         </div>
     </div>
-
-
+</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

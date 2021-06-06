@@ -48,12 +48,12 @@
                 <table class="table table-hover">
                     <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Id module</th>
-                        <th scope="col">Tên module</th>
-                        <th scope="col">Ngày bắt đầu</th>
-                        <th scope="col">Ngày kết thúc</th>
-                        <th scope="col">Số điểm</th>
-                        <th scope="col">Thao tác</th>
+                        <th scope="col">Id Module</th>
+                        <th scope="col">Tên Module</th>
+                        <th scope="col">Ngày Bắt Đầu</th>
+                        <th scope="col">Ngày Kết Thúc</th>
+                        <th scope="col">Số Điểm</th>
+                        <th scope="col">Thao Tác</th>
 
                     </tr>
                     </thead>

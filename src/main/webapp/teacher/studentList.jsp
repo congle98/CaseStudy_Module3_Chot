@@ -48,13 +48,13 @@
                 <table class="table table-hover">
                     <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Id học sinh</th>
-                        <th scope="col">Tên học sinh</th>
-                        <th scope="col">Email học sinh</th>
-                        <th scope="col">Ngày sinh</th>
-                        <th scope="col">Link ảnh</th>
-                        <th scope="col">Địa chỉ</th>
-                        <th scope="col">Tình trạng</th>
+                        <th scope="col">Id Học Viên</th>
+                        <th scope="col">Tên Học Viên</th>
+                        <th scope="col">Email Học Viên</th>
+                        <th scope="col">Ngày Sinh</th>
+                        <th scope="col">Link Ảnh</th>
+                        <th scope="col">Địa Chỉ</th>
+                        <th scope="col">Tình Trạng</th>
                     </tr>
                     </thead>
                     <tbody>

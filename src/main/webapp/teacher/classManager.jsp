@@ -42,17 +42,17 @@
 <div class="content-block">
     <div class="content">
         <div class="content-title">
-            Bảng danh sách lớp phụ trách
+            Bảng Danh Sách Lớp Phụ Trách
         </div>
         <div class="main-content">
             <div class="student-list">
                 <table class="table table-hover">
                     <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Id lớp</th>
-                        <th scope="col">Tên lớp</th>
-                        <th scope="col">Thuộc khoá học</th>
-                        <th colspan="2" scope="col">Thao tác</th>
+                        <th scope="col">Id Lớp</th>
+                        <th scope="col">Tên Lớp</th>
+                        <th scope="col">Thuộc Khoá Học</th>
+                        <th colspan="2" scope="col">Thao Tác</th>
                     </tr>
                     </thead>
                     <tbody>

@@ -44,11 +44,11 @@
         <div class="form-product">
             <form method="post" >
                 <div class="form-group">
-                    <label class="form-label" for="id">Id học sinh</label>
+                    <label class="form-label" for="id">Id Học Viên</label>
                     <input class="form-control" name="id" id="id" readonly value="${student.id}">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="name">Tên học sinh</label>
+                    <label class="form-label" for="name">Tên Học Viên</label>
                     <input class="form-control" name="name" id="name" value="${student.name}"></br>
                 </div>
                 <div class="form-group">
@@ -64,7 +64,7 @@
                     <input class="form-control" name="url" id="url" value="${student.url}"></br>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="dob">Ngày sinh</label>
+                    <label class="form-label" for="dob">Ngày Sinh</label>
                     <input class="form-control" name="dob" id="dob"  type="date" value="${student.dob}"></br>
                 </div>
                 <div class="form-group">
@@ -78,7 +78,7 @@
                     </select></br>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="class_id">Thuộc lớp</label>
+                    <label class="form-label" for="class_id">Thuộc Lớp</label>
                     <select class="form-select" name="class_id"  id="class_id" aria-readonly="true"  >
                         <c:forEach items="${classList}" var="cl"  >
                             <option value="${cl.id}"
@@ -88,7 +88,7 @@
                     </select></br>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="status_id">Trạng thái</label>
+                    <label class="form-label" for="status_id">Trạng Thái</label>
                     <select class="form-select" name="status_id"  id="status_id" aria-readonly="true"  >
                         <c:forEach items="${statusList}" var="status"  >
                             <option value="${status.id}"

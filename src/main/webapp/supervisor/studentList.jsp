@@ -46,22 +46,22 @@
 <div class="content-block">
     <div class="content">
         <div class="content-title">
-            Bảng danh sách các học sinh
+            Bảng Danh Sách Các Học Viên
         </div>
         <div class="main-content">
             <div class="student-list">
                 <table class="table table-hover">
                     <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Id học sinh</th>
-                        <th scope="col">Tên học sinh</th>
-                        <th scope="col">Email học sinh</th>
-                        <th scope="col">Ngày sinh</th>
-                        <th scope="col">Link ảnh</th>
-                        <th scope="col">Địa chỉ</th>
-                        <th scope="col">Thuộc lớp</th>
-                        <th scope="col">Tình trạng</th>
-                        <th scope="col">Thao tác</th>
+                        <th scope="col">Id Học Viên</th>
+                        <th scope="col">Tên Học Sinh</th>
+                        <th scope="col">Email Học Sinh</th>
+                        <th scope="col">Ngày Sinh</th>
+                        <th scope="col">Link Ảnh</th>
+                        <th scope="col">Địa Chỉ</th>
+                        <th scope="col">Thuộc Lớp</th>
+                        <th scope="col">Tình GTrạng</th>
+                        <th scope="col">Thao Tác</th>
                     </tr>
                     </thead>
                     <tbody>

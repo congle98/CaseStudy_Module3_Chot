@@ -45,11 +45,11 @@
     <div class="form-product">
       <form method="post" >
         <div class="form-group">
-          <label class="form-label" for="id">Id giáo vụ</label>
+          <label class="form-label" for="id">Id Giáo Vụ</label>
           <input class="form-control" name="id" id="id" readonly value="${supervisor.id}">
         </div>
         <div class="form-group">
-          <label class="form-label" for="name">Tên giáo vụ</label>
+          <label class="form-label" for="name">Tên Giáo Vụ</label>
           <input class="form-control" name="name" id="name" value="${supervisor.name}"></br>
         </div>
         <div class="form-group">
@@ -65,11 +65,11 @@
           <input class="form-control" name="url" id="url" value="${supervisor.url}"></br>
         </div>
         <div class="form-group">
-          <label class="form-label" for="dob">Ngày sinh</label>
+          <label class="form-label" for="dob">Ngày Sinh</label>
           <input class="form-control" name="dob" id="dob"  type="date" value="${supervisor.dob}"></br>
         </div>
         <div class="form-group">
-          <label class="form-label" for="address_id">Địa chỉ</label>
+          <label class="form-label" for="address_id">Địa Chỉ</label>
           <select class="form-select" name="address_id"  id="address_id"  >
             <c:forEach items="${addressList}" var="address" >
               <option value="${address.id}"

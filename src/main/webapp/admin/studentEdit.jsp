@@ -42,11 +42,11 @@
         <div class="form-product">
             <form method="post" >
                 <div class="form-group">
-                    <label class="form-label" for="id">Id giáo vụ</label>
+                    <label class="form-label" for="id">Id Học Viên</label>
                     <input class="form-control" name="id" id="id" value="${student.id}" disabled>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="name">Tên giáo vụ</label>
+                    <label class="form-label" for="name">Tên Học Viên</label>
                     <input class="form-control" name="name" id="name" value="${student.name}"></br>
                 </div>
                 <div class="form-group">
@@ -62,11 +62,11 @@
                     <input class="form-control" name="url" id="url" value="${student.url}"></br>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="dob">Ngày sinh</label>
+                    <label class="form-label" for="dob">Ngày Sinh</label>
                     <input class="form-control" name="dob" id="dob"  type="date" value="${student.dob}"></br>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="class_id">Thuộc lớp</label>
+                    <label class="form-label" for="class_id">Thuộc Lớp</label>
                     <select class="form-select" name="class_id"  id="class_id" >
                         <c:forEach items="${classList}" var="cl" >
                             <option value="${cl.id}"

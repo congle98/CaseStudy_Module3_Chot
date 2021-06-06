@@ -45,12 +45,12 @@
         <div class="form-product">
             <form method="post">
                 <div class="form-group">
-                    <label class="form-label" for="name">Nhập tên</label>
+                    <label class="form-label" for="name">Nhập Tên</label>
                     <input name="name" id="name"  class="form-control" type="text" placeholder="tên">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label" for="price">Nhập giá</label>
+                    <label class="form-label" for="price">Nhập Giá</label>
                     <input name="price" id="price"  class="form-control" type="text" placeholder="giá">
                 </div>
                 <div class="form-group">

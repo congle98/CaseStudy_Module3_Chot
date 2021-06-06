@@ -44,7 +44,7 @@
         <div class="form-product">
             <form method="post" >
                 <div class="form-group">
-                    <label class="form-label" for="score">Điểm mới</label>
+                    <label class="form-label" for="score">Điểm Mới</label>
                     <input class="form-control" name="score" id="score"  value="${score}">
                 </div>
                 <div class="form-group">

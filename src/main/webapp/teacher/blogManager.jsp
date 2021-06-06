@@ -50,9 +50,9 @@
                 <table class="table table-hover">
                     <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Id blog</th>
-                        <th scope="col">Chi tiết</th>
-                        <th scope="col">Ngày đăng</th>
+                        <th scope="col">Id Blog</th>
+                        <th scope="col">Chi Tiết</th>
+                        <th scope="col">Ngày Đăng</th>
                     </tr>
                     </thead>
                     <tbody>

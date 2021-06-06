@@ -46,11 +46,11 @@
         <div class="form-product">
             <form method="post">
                 <div class="form-group">
-                    <label class="form-label" for="description">Nhập nội dung</label>
+                    <label class="form-label" for="description">Nhập Nội Dung</label>
                     <input name="description" id="description"  class="form-control" type="text" placeholder="nội dung">
                 </div>
                 <div class="form-group">
-                    <label class="form-label" for="date">Nhập ngày đăng</label>
+                    <label class="form-label" for="date">Nhập Ngày Đăng</label>
                     <input name="date" id="date"  class="form-control" type="date" placeholder="ngày đăng">
                 </div>
                 <div class="form-group">
