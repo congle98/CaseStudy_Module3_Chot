@@ -93,10 +93,10 @@ public class AdminServlet extends HttpServlet {
                 showFormCourseCreate(req,resp);
                 break;
             case "logOut":
-                adminLoginPage(req,resp);
+                adminLoginPage(req,resp,false);
                 break;
             default:
-                adminLoginPage(req,resp);
+                adminLoginPage(req,resp,false);
                 break;
         }
     }
@@ -138,20 +138,26 @@ public class AdminServlet extends HttpServlet {
             case "createCourse":
                 createCourse(req,resp);
                 break;
-
             default:
-                adminLoginPage(req,resp);
+                adminLoginPage(req,resp,false);
                 break;
         }
     }
 
 
-    private void adminLoginPage(HttpServletRequest req, HttpServletResponse resp){
+    private void adminLoginPage(HttpServletRequest req, HttpServletResponse resp, boolean check){
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/admin/adminLogin.jsp");
+        req.setAttribute("check_", check);
         try {
-            resp.sendRedirect("/admin/adminLogin.jsp");
-        } catch (IOException e) {
+            dispatcher.forward(req, resp);
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
+//        try {
+//            resp.sendRedirect("/admin/adminLogin.jsp");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private void adminHomePage(HttpServletRequest req, HttpServletResponse resp) {
@@ -185,7 +191,7 @@ public class AdminServlet extends HttpServlet {
             }
         }
         if(!check){
-            adminLoginPage(req,resp);
+            adminLoginPage(req,resp,true);
         }
     }
     private void showFormSupervisorEdit(HttpServletRequest req, HttpServletResponse resp) {
