@@ -2,7 +2,7 @@
     background-color: rgba(49, 57, 65, 0.7);
     border-radius: 5px;
     width: 300px;
-    height: 350px;
+    height: 370px;
     margin-top: 170px;
 
 
@@ -16,7 +16,8 @@ body {
     width: 1520px;
     height: 1200px;
     margin: auto;
-    background-image: url(/style/img/login-background.jpg);
+    background-image: url(/style/img/backgroudbase.jpg);
+    background-size: 100%;
     display: flex;
     justify-content: center;
 
