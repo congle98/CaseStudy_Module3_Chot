@@ -1,0 +1,45 @@
+.content-home-block {
+    width: 1520px;
+    height: 1000px;
+    background-color: #f8fafb;
+    margin: 0 auto;
+    position: relative;
+}
+html,body{
+    background-color:  #f8fafb;
+}
+.carousel-block{
+    position: relative;
+    margin-top: 100px;
+
+}
+.carousel-img{
+    width: 1520px;
+    height: 600px;
+}
+.introduce-block{
+    color:#5e4c3e;
+
+}
+
+.introduce-title{
+    margin-top: 50px;
+    text-align: center;
+}
+.course-list{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.card{
+    width: 350px;
+
+}
+.card-img-top{
+    height: 250px !important;
+}
+.card-btn{
+    position:relative;
+    margin-left: 60px;
+    bottom: 0px;
+}

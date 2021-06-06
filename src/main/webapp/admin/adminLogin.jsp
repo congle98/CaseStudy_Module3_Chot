@@ -4,16 +4,6 @@
   Date: 6/2/2021
   Time: 4:34 PM
   To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: CONG
-  Date: 6/2/2021
-  Time: 10:24 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%--
   Created by IntelliJ IDEA.
@@ -55,7 +45,10 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input name = "password" type="password" class="form-control" id="exampleInputPassword1">
                 </div>
-                <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                <div class="submit-block" style="margin-top: 30px">
+                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                </div>
+
             </form>
         </div>
     </div>
