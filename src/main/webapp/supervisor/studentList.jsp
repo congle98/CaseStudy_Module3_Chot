@@ -71,7 +71,7 @@
                             <td>${student.name}</td>
                             <td>${student.email}</td>
                             <td>${student.dob}</td>
-                            <td>${student.url}</td>
+                            <td><img class="user-img" src="${student.url}" alt=""></td>
                             <td>${student.address.name}</td>
                             <td>${student.classOfAcademy.name}</td>
                             <td>${student.status.name}</td>
