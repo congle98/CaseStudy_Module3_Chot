@@ -1,0 +1,56 @@
+.navigation {
+    width: 100%;
+    background-color: #313941;
+    color: #627483;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.navi-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navi-list {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.logo{
+    height: 50px;
+    line-height: 50px;
+}
+.navi-item {
+    height: 50px;
+    margin-left: 12px;
+    line-height: 50px;
+
+}
+
+.navi-item:hover {
+    background-color: #627483;
+    color: var(--while-color);
+    cursor: pointer;
+    border-bottom: solid 4px #009eda;
+}
+.user-controller:hover .controller{
+    display: block;
+}
+.controller {
+    display: none;
+
+}
+
+.control-item {
+    color: #627483;
+    background-color: #313941;
+
+
+}
+
+.control-item:hover {
+    border-bottom: solid 4px #627483;
+    background-color: #627483;
+    color: var(--while-color);
+}

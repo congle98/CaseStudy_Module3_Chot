@@ -34,61 +34,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="/style/loginBase.css">
 
-    <style>
-        .form-login{
-            background-color: rgba(49,57,65,0.7);
-            margin: 150px auto;
-            border-radius: 5px;
-            width: 300px;
-
-        }
-        body{
-            background-image: url(/style/img/login-background.jpg);
-
-        }
-        .form-title{
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            font-size: 2rem;
-        }
-        .form-content{
-            width: 90%;
-            margin: auto;
-        }
-        .btn-submit{
-            width:100%;
-            background-color: #009eda;
-            margin-bottom: 30px;
-        }
-
-    </style>
-    <title>Login!</title>
+    <title>Admin Login!</title>
 </head>
 
 <body>
-<div class="form-login">
-    <div class="form-title">
-        <p><i class="fas fa-chalkboard-teacher"></i> Login Forms</p>
+<div class="content">
+    <div class="form-login">
+        <div class="form-title">
+            <p><i class="fas fa-chalkboard-teacher"></i> Admin Login</p>
+        </div>
+        <div class="form-content">
+            <form action="/Admin?action=login" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1"  class="form-label">Email</label>
+                    <input name = "email" type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input name = "password" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+            </form>
+        </div>
     </div>
-    <div class="form-content">
-        <form action="/Admin?action=login" method="post">
-            <div class="mb-3">
-                <label for="exampleInputEmail1"  class="form-label">Email</label>
-                <input name = "email" type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input name = "password" type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button type="submit" class="btn btn-primary btn-submit">Submit</button>
-        </form>
-    </div>
-    <!-- <div class="change-register">
-        <span>Already have an account?</span><a href="" class="register-link">Login</a>
-    </div> -->
 </div>
+
 
 
 </body>

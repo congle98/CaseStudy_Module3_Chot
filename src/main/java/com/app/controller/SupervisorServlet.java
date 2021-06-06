@@ -1,8 +1,6 @@
 package com.app.controller;
 
-import com.app.model.Address;
-import com.app.model.Status;
-import com.app.model.Supervisor;
+import com.app.model.*;
 import com.app.service.addressservice.AddressService;
 import com.app.service.addressservice.IAddressService;
 import com.app.service.classservice.ClassService;
@@ -24,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(value = "/Supervisor")
@@ -57,6 +56,9 @@ public class SupervisorServlet extends HttpServlet {
             case "editScore":
                 showFormEditScore(req,resp);
                 break;
+            case "showAchievementsStudent":
+                showAchievementsStudent(req,resp);
+                break;
             default:
                 supervisorHomePage(req,resp);
                 break;
@@ -76,13 +78,15 @@ public class SupervisorServlet extends HttpServlet {
                 accountManager(req,resp);
                 break;
             case "editScore":
-                showFormEditScore(req,resp);
+                editScore(req,resp);
                 break;
             default:
                 supervisorHomePage(req,resp);
                 break;
         }
     }
+
+
 
     private void accountManager(HttpServletRequest req, HttpServletResponse resp) {
         int id = Integer.parseInt(req.getParameter("id"));
@@ -117,15 +121,61 @@ public class SupervisorServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+    private void showAchievementsStudent(HttpServletRequest req, HttpServletResponse resp) {
+        int id = Integer.parseInt(req.getParameter("id"));
+        List<Module> moduleList = moduleService.findByStudentId(id);
+        List<Double> scoreList = new ArrayList<>();
+        for (Module m: moduleList
+             ) {
+            double score = studentService.findScoreByStudentIModuleId(id,m.getId());
+            scoreList.add(score);
+        }
+        req.setAttribute("supervisor",supervisorMain);
+        req.setAttribute("moduleList",moduleList);
+        req.setAttribute("scoreList",scoreList);
+        req.setAttribute("studentId",id);
+
+        RequestDispatcher rd = req.getRequestDispatcher("/supervisor/showAchievementsStudent.jsp");
+        try {
+            rd.forward(req,resp);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     private void showFormEditScore(HttpServletRequest req, HttpServletResponse resp) {
+        int module_id = Integer.parseInt(req.getParameter("idModule"));
+        int student_id = Integer.parseInt(req.getParameter("idStudent"));
+        double score = studentService.findScoreByStudentIModuleId(student_id,module_id);
+        RequestDispatcher rd = req.getRequestDispatcher("/supervisor/editScore.jsp");
+        req.setAttribute("score",score);
+        req.setAttribute("supervisor",supervisorMain);
+        try {
+            rd.forward(req,resp);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+    private void editScore(HttpServletRequest req, HttpServletResponse resp) {
+        int module_id = Integer.parseInt(req.getParameter("idModule"));
+        int student_id = Integer.parseInt(req.getParameter("idStudent"));
+        double score = Double.parseDouble(req.getParameter("score"));
+        studentService.updateScoreByStudentIModuleId(student_id,module_id,score);
+        supervisorHomePage(req,resp);
+    }
+
 
     private void showFormAccount(HttpServletRequest req, HttpServletResponse resp) {
         req.setAttribute("supervisor",supervisorMain);
         List<Address> addressList = addressService.findAll();
         req.setAttribute("addressList",addressList);
-        RequestDispatcher rd = req.getRequestDispatcher("/teacher/accountManager.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/supervisor/accountManager.jsp");
         try {
             rd.forward(req,resp);
         } catch (ServletException e) {
@@ -137,6 +187,18 @@ public class SupervisorServlet extends HttpServlet {
     }
 
     private void showFormStudent(HttpServletRequest req, HttpServletResponse resp) {
+        List<Student> studentList = studentService.findAll();
+        req.setAttribute("studentList",studentList);
+        req.setAttribute("supervisor",supervisorMain);
+        RequestDispatcher rd = req.getRequestDispatcher("/supervisor/studentList.jsp");
+        try {
+            rd.forward(req,resp);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 

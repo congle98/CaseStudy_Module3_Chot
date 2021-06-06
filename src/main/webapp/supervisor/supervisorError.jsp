@@ -15,6 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/navigationBase.css">
+    <link rel="stylesheet" href="/style/contentBase.css">
+    <link rel="stylesheet" href="/style/formBase.css">
     <title>Hello, world!</title>
 </head>
 <body>

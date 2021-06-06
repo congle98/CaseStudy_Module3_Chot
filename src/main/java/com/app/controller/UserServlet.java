@@ -128,7 +128,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void supervisorLogin(HttpServletRequest req, HttpServletResponse resp) {
-        RequestDispatcher rd = req.getRequestDispatcher("/teacher/teacherHome.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/supervisor/supervisorHome.jsp");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
         List<Supervisor> supervisorList = null;

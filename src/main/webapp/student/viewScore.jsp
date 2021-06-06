@@ -9,62 +9,69 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>TEACHER HOME</title>
+    <title>View Score</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <style>
-        .form-product-1{
-            margin: 75px auto;
-        }
-        .form-product{
-            width: 90%;
-            height: 90%;
-            margin: auto;
+    <link rel="stylesheet" href="/style/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/navigationBase.css">
+    <link rel="stylesheet" href="/style/contentBase.css">
+    <link rel="stylesheet" href="/style/formBase.css">
 
-        }
-        body{
-            background: #e9ecef;
-        }
-    </style>
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand btn btn-outline-info" href="/Student?action=accountManager">Account Management</a>
-
-        <a class="navbar-brand btn btn-outline-info" href="/Student?action=home">Back to home</a>
-
-        <h3 style="color: red">Student : ${student.name}</h3>
-        <a class="navbar-brand btn btn-outline-info" href="/Student?action=logOut">LogOut</a>
+<div class="navigation">
+    <div class="container navi-items">
+        <div class="logo-block">
+            <div class="logo">
+                <a href="/Student?action=home"><i class="fas fa-graduation-cap"></i>Home</a>
+            </div>
+        </div>
+        <div class="navi-list">
+            <div class="navi-item"><a  href="/Student?action=moduleList">Module List</a></div>
+            <div class="navi-item user-controller">${student.name}<i class="fas fa-user-tie"></i>
+                <div class="controller">
+                    <div class="control-item"><a href="/Student?action=accountManager">Account Management</a></div>
+                    <div class="control-item"><a href="/Student?action=logOut">LogOut</a></div>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
-<div style="margin-top: 70px">
+</div>
+<div class="content-block">
+    <div class="content">
+        <div class="content-title">
+            Bảng Module
+        </div>
+        <div class="main-content">
+            <div class="student-list">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id module</th>
+                        <th scope="col">Tên module</th>
+                        <th scope="col">Ngày bắt đầu</th>
+                        <th scope="col">Ngày kết thúc</th>
+                        <th scope="col">Số điểm</th>
 
-    <table class="table table-hover">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Id module</th>
-            <th scope="col">Tên module</th>
-            <th scope="col">Ngày bắt đầu</th>
-            <th scope="col">Ngày kết thúc</th>
-            <th scope="col">Số điểm</th>
-
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">${module.id}</td>
-                <td>${module.name}</td>
-                <td>${module.dateStart}</td>
-                <td>${module.dateEnd}</td>
-                <td><c:if test = "${score > 0}">
-                    ${score}
-                </c:if></td>
-            </tr>
-        </tbody>
-    </table>
-
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td scope="row">${module.id}</td>
+                        <td>${module.name}</td>
+                        <td>${module.dateStart}</td>
+                        <td>${module.dateEnd}</td>
+                        <td><c:if test = "${score > 0}">
+                            ${score}
+                        </c:if></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

@@ -1,0 +1,44 @@
+.content-block{
+    margin: 50px auto;
+    padding-top: 50px;
+    width: 1520px;
+    min-height: 1200px;
+    background-image: url(/style/img/backgroudbase.jpg);
+    background-repeat:repeat;
+    background-size: 100%;
+    font-size: 16px;
+
+}
+.content {
+    color: #627483;
+    background-color: var(--while-color);
+    width: 1400px;
+    margin: auto;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.content-title {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #6e8292;
+    color: var(--while-color);
+}
+
+.content-title:hover {
+    background-color: #313941;
+    cursor: pointer;
+}
+
+.table-title {
+    background-color: #6e8292;
+    color: var(--while-color);
+    text-align: center;
+}
+
+.table-title:hover {
+    background-color: #313941;
+    cursor: pointer;
+}
