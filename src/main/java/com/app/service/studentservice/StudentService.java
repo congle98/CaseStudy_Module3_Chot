@@ -153,14 +153,25 @@ public class StudentService implements IStudentService {
     @Override
     public void delete(int id) {
         try {
+            String delete_score_of_student = "delete from score_of_student where student_id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(delete_score_of_student);
+            preparedStatement.setInt(1,id);
+            connection.setAutoCommit(false);
+            preparedStatement.executeUpdate();
             PreparedStatement statement = connection.prepareStatement(DELETE_STUDENT);
             statement.setInt(1, id);
             statement.executeUpdate();
+            connection.commit();
         } catch (SQLException throwables) {
+            try {
+                connection.rollback();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             throwables.printStackTrace();
         }
-
     }
+
 
     public double findScoreByStudentIModuleId(int student_id,int module_id){
         double score = 0;

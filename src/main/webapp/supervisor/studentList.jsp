@@ -22,7 +22,12 @@
     <link rel="stylesheet" href="/style/navigationBase.css">
     <link rel="stylesheet" href="/style/contentBase.css">
     <link rel="stylesheet" href="/style/formBase.css">
-
+    <style>
+        .user-img {
+            width: 80px ;
+            height: 80px ;
+        }
+    </style>
 </head>
 <body>
 <div class="navigation">
@@ -71,7 +76,7 @@
                             <td>${student.name}</td>
                             <td>${student.email}</td>
                             <td>${student.dob}</td>
-                            <td><img class="user-img" src="${student.url}" alt=""></td>
+                            <td><img class="user-img" src="${student.url}" alt="not fount"></td>
                             <td>${student.address.name}</td>
                             <td>${student.classOfAcademy.name}</td>
                             <td>${student.status.name}</td>

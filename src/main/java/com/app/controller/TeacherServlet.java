@@ -33,7 +33,7 @@ public class TeacherServlet extends HttpServlet {
     IStatusService statusService = new StatusService();
     IBlogService blogService = new BlogService();
     private  List<Address> addressListMain  = addressService.findAll();
-    static  User teacherMain =  UserServlet.user;
+    static  Teacher teacherMain =  UserServlet.teacherUser;
     List<ClassOfAcademy> classListMain = classService.findClassByTeacherId(teacherMain.getId());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

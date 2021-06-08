@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="/style/navigationBase.css">
     <link rel="stylesheet" href="/style/contentBase.css">
     <link rel="stylesheet" href="/style/formBase.css">
+    <style>
+        .user-img {
+            width: 80px ;
+            height: 80px ;
+        }
+    </style>
 
 </head>
 <body>
@@ -66,7 +72,7 @@
                             <td>${s.email}</td>
                             <td>${s.password}</td>
                             <td>${s.address.name}</td>
-                            <td><img class="user-img" src="${s.url}" alt=""></td>
+                            <td><img class="user-img" src="${s.url}" alt="not fount"></td>
                             <td>${s.dob}</td>
                             <td>${s.status.name}</td>
 
@@ -107,7 +113,7 @@
                         <td>${t.email}</td>
                         <td>${t.password}</td>
                         <td>${t.address.name}</td>
-                        <td><img class="user-img" src="${t.url}" alt=""></td>
+                        <td><img class="user-img" src="${t.url}" alt="not fount"></td>
                         <td>${t.dob}</td>
                         <td>${t.status.name}</td>
 
@@ -151,7 +157,7 @@
                             <td>${s.email}</td>
                             <td>${s.password}</td>
                             <td>${s.address.name}</td>
-                            <td><img class="user-img" src="${s.url}" alt=""></td>
+                            <td><img class="user-img" src="${s.url}" alt="not fount"></td>
                             <td>${s.dob}</td>
                             <td>${s.status.name}</td>
                             <td>${s.classOfAcademy.name}</td>

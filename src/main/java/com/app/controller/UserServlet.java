@@ -26,7 +26,7 @@ public class UserServlet extends HttpServlet {
     ISupervisorService supervisorService = new SupervisorService();
     ITeacherService teacherService = new TeacherService();
     IStudentService studentService = new StudentService();
-    static User user = null;
+    static Teacher teacherUser = null;
     static Student studentUser = null;
     static Supervisor supervisorUser = null;
      @Override
@@ -111,10 +111,10 @@ public class UserServlet extends HttpServlet {
             ) {
                 if(t.getEmail().equals(email)&& t.getPassword().equals(password)) {
                     check = true;
-                        user = t;
-                        TeacherServlet.teacherMain = user;
+                        teacherUser = t;
+                        TeacherServlet.teacherMain = teacherUser;
 
-                        req.setAttribute("teacher",user);
+                        req.setAttribute("teacher",teacherUser);
                         rd.forward(req,resp);
                 }
             }
